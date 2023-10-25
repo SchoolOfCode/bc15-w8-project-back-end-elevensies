@@ -24,6 +24,18 @@ export async function getProjectsByLanguage(language) {
   const result = await pool.query(queryText, [`%${language}%`]);
   return result.rows;
 }
+
 //add new project
+export async function createProject() {
+  const queryText = `INSERT INTO projects (
+      name, short_description, long_description, language, topic, difficulty, url)
+      VALUES ($1, $2, $3, $4, $5, $6, $7)
+      RETURNING *;`
+  const result = await pool.query(queryText, [
+    project.name, project.short_description, project.long_description, project.language, project.topic, project.difficulty, project.url
+  ])
+  return result.rows;
+}
+
 
 //delete by id
