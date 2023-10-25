@@ -7,6 +7,6 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.static("public"));
-app.use("/api/projects", projectsRoutes);
+app.use("/projects", projectsRoutes);
 
 export default app;
