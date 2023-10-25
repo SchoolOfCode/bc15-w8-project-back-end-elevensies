@@ -6,5 +6,26 @@ export async function getProjects(req, res) {
 	res.status(200).json({ status: "success", data: projects });
 }
 
-//Second request would be to filter projects and get by language or difficulty
-export async function getProjectsByX(req, res) {}
+//Second request would be to filter projects and get by difficulty
+export async function getProjectsByDifficulty(req, res) {
+	const difficulty = req.body.difficulty;
+	const projects = await projectsModel.getProjectsByDifficulty(difficulty);
+	if (!projects) {
+		return res
+			.status(404)
+			.json({ status: "fail", data: { message: "Projects Not Found" } });
+	}
+	res.status(200).json({ status: "success", data: projects });
+}
+
+//Third request would be to filter projects and get by language
+export async function getProjectsByLanguage(req, res) {
+	const language = req.body.language;
+	const projects = await projectsModel.getProjectsByLanguage(language);
+	if (!projects) {
+		return res
+			.status(404)
+			.json({ status: "fail", data: { message: "Projects Not Found" } });
+	}
+	res.status(200).json({ status: "success", data: projects });
+}
