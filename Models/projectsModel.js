@@ -2,8 +2,13 @@
 import { pool } from "../db/index.js";
 
 export async function getProjects() {
-	// Query the database and return all projects
-	const queryText = "SELECT * FROM projects";
-	const result = await pool.query(queryText);
-	return result.rows;
+  // Query the database and return all projects
+  const queryText = "SELECT * FROM projects";
+  const result = await pool.query(queryText);
+  return result.rows;
 }
+//Need to build remaining models:
+//get by difficulty
+//get by language
+//add new project
+//delete by id
