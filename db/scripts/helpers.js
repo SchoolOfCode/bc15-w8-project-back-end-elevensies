@@ -5,15 +5,20 @@ import { pool } from "./index.js";
  */
 export async function resetProjectTables(data) {
   await pool.query(`
-    DROP TABLE IF EXISTS todos;
-    CREATE TABLE todos (
+    DROP TABLE IF EXISTS projects;
+    CREATE TABLE projects (
       id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-      completed BOOLEAN NOT NULL,
-      task TEXT NOT NULL
+      name VARCHAR(255) NOT NULL,
+      short_description VARCHAR(255) NOT NULL,
+      long_description VARCHAR(255) NOT NULL,
+      language VARCHAR(255) NOT NULL,
+      topic VARCHAR(255),
+      difficulty VARCHAR(255) NOT NULL,
+      url VARCHAR(255)
     );`);
 
   const inserted = await pool.query(
-    `INSERT INTO todos (
+    `INSERT INTO projects (
       completed, task
     ) (
       SELECT completed, task
