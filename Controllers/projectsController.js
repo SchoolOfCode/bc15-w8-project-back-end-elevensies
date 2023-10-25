@@ -38,7 +38,7 @@ export async function createProject(req, res) {
 }
 
 //Fifth request would delete a project from the DB
-export async function deleteFunctionById(req, res) {
+export async function deleteProjectById(req, res) {
 	const id = req.params.id;
 	const project = await projectsModel.deleteProjectById(id);
 	if (!project) {
