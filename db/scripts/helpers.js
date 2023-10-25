@@ -19,10 +19,10 @@ export async function resetProjectTables(data) {
 
   const inserted = await pool.query(
     `INSERT INTO projects (
-      completed, task
+      name, short_description, long_description, language, topic, difficulty, url
     ) (
-      SELECT completed, task
-      FROM json_populate_recordset(NULL::todos, $1::JSON)
+      SELECT name, short_description, long_description, language, topic, difficulty, url
+      FROM json_populate_recordset(NULL::projects, $1::JSON)
     )
     RETURNING *;`,
     [JSON.stringify(data)]
