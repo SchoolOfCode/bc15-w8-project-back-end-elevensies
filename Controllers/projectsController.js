@@ -29,3 +29,10 @@ export async function getProjectsByLanguage(req, res) {
 	}
 	res.status(200).json({ status: "success", data: projects });
 }
+
+//Fourth request would create a new project and add it to the DB
+export async function creatProject(req, res) {
+	const data = req.body;
+	const project = await projectsModel.createProject(data);
+	res.status(201).json({ status: "success", data: project });
+}
