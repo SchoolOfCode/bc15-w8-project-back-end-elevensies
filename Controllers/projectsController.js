@@ -31,8 +31,20 @@ export async function getProjectsByLanguage(req, res) {
 }
 
 //Fourth request would create a new project and add it to the DB
-export async function creatProject(req, res) {
+export async function createProject(req, res) {
 	const data = req.body;
 	const project = await projectsModel.createProject(data);
 	res.status(201).json({ status: "success", data: project });
+}
+
+//Fifth request would delete a project from the DB
+export async function deleteFunctionById(req, res) {
+	const id = req.params.id;
+	const project = await projectsModel.deleteProjectById(id);
+	if (!project) {
+		return res
+			.status(404)
+			.json({ status: "fail", data: { message: "Project not found" } });
+	}
+	res.status(200).json({ status: "success", data: project });
 }
