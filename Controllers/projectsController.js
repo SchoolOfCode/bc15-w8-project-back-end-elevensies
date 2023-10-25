@@ -1,5 +1,5 @@
 //will need to import projects models from /models/porjectModels.js
-
+import * as projectsModel from "../Models/projectsModel.js";
 //First request to get hold of all the projects
 export async function getProjects(req, res) {
 	const projects = await projectsModel.getProjects();
