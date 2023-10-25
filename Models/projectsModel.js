@@ -26,7 +26,7 @@ export async function getProjectsByLanguage(language) {
 }
 
 //add new project
-export async function createProject() {
+export async function createProject(project) {
   const queryText = `INSERT INTO projects (
       name, short_description, long_description, language, topic, difficulty, url)
       VALUES ($1, $2, $3, $4, $5, $6, $7)
