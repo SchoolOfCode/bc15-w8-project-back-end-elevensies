@@ -37,5 +37,11 @@ export async function createProject(project) {
   return result.rows;
 }
 
-
 //delete by id
+export async function deleteProjectById(id) {
+  const queryText = `DELETE FROM projects 
+    WHERE id = $1
+    RETURNING *`;
+  const result = await pool.query(queryText, [id]);
+  return result.rows;
+}
