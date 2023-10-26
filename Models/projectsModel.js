@@ -13,7 +13,7 @@ export async function getProjectsByDifficulty(difficulty) {
   // build SQL query
   const queryText = "SELECT * FROM projects WHERE difficulty = $1";
   // send query and store result
-  const result = await pool.query(queryText, [`'${difficulty}'`]);
+  const result = await pool.query(queryText, [`${difficulty}`]);
   return result.rows;
 }
 //get by language
@@ -21,7 +21,7 @@ export async function getProjectsByLanguage(language) {
   // build SQL query
   const queryText = "SELECT * FROM projects WHERE language = $1";
   // send query and store result
-  const result = await pool.query(queryText, [`'%${language}%'`]);
+  const result = await pool.query(queryText, [`${language}`]);
   return result.rows;
 }
 

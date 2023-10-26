@@ -6,9 +6,12 @@ export const projectsRoutes = express.Router();
 
 projectsRoutes.get("/", projectsController.getProjects);
 
-projectsRoutes.get("/difficulty", projectsController.getProjectsByDifficulty);
+projectsRoutes.get(
+  "/difficulty/:level",
+  projectsController.getProjectsByDifficulty
+);
 
-projectsRoutes.get("/language", projectsController.getProjectsByLanguage);
+projectsRoutes.get("/language/:lang", projectsController.getProjectsByLanguage);
 
 projectsRoutes.post("/", projectsController.createProject);
 

@@ -8,8 +8,7 @@ export async function getProjects(req, res) {
 
 //Second request would be to filter projects and get by difficulty
 export async function getProjectsByDifficulty(req, res) {
-  const difficulty = req.params.difficulty;
-  console.log(req.params)
+  const difficulty = req.params.level;
   const projects = await projectsModel.getProjectsByDifficulty(difficulty);
   if (!projects) {
     return res
@@ -21,7 +20,7 @@ export async function getProjectsByDifficulty(req, res) {
 
 //Third request would be to filter projects and get by language
 export async function getProjectsByLanguage(req, res) {
-  const language = req.params.language;
+  const language = req.params.lang;
   const projects = await projectsModel.getProjectsByLanguage(language);
   if (!projects) {
     return res
