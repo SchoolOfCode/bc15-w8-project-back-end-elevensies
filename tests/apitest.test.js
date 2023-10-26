@@ -91,7 +91,7 @@ test("create new project", async () => {
 		url: "https://codepen.io/diegoleme/pen/qBpyvr",
 	};
 	// ACT:
-	// Send a POST request to the /api/projects endpoint with the projectData
+	// Send a POST request to the /projects endpoint with the projectData
 	const response = await supertest(app)
 		.post("/projects")
 		.send(projectData)
@@ -272,12 +272,12 @@ test("get CSS projects", async function () {
 			"Response body is not an array"
 		);
 
-		// Filter projects with difficulty "Difficult"
+		// Filter projects with language "CSS"
 		const cssProjects = response.body.filter(
 			(project) => project.language === "CSS"
 		);
 
-		// Check that all projects in the filtered response have difficulty set to "Difficult"
+		// Check that all projects in the filtered response have language set to "CSS"
 		expect(cssProjects.every((project) => project.language === "CSS")).toBe(
 			true,
 			"Not all projects have use the language 'CSS'"
