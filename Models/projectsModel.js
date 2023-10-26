@@ -11,17 +11,17 @@ export async function getProjects() {
 //get by difficulty
 export async function getProjectsByDifficulty(difficulty) {
   // build SQL query
-  const queryText = "SELECT * FROM projects WHERE difficulty LIKE $1";
+  const queryText = "SELECT * FROM projects WHERE difficulty = $1";
   // send query and store result
-  const result = await pool.query(queryText, [difficulty]);
+  const result = await pool.query(queryText, [`'${difficulty}'`]);
   return result.rows;
 }
 //get by language
 export async function getProjectsByLanguage(language) {
   // build SQL query
-  const queryText = "SELECT * FROM projects WHERE language LIKE $1";
+  const queryText = "SELECT * FROM projects WHERE language = $1";
   // send query and store result
-  const result = await pool.query(queryText, [`%${language}%`]);
+  const result = await pool.query(queryText, [`'%${language}%'`]);
   return result.rows;
 }
 
@@ -30,10 +30,16 @@ export async function createProject(project) {
   const queryText = `INSERT INTO projects (
       name, short_description, long_description, language, topic, difficulty, url)
       VALUES ($1, $2, $3, $4, $5, $6, $7)
-      RETURNING *;`
+      RETURNING *;`;
   const result = await pool.query(queryText, [
-    project.name, project.short_description, project.long_description, project.language, project.topic, project.difficulty, project.url
-  ])
+    project.name,
+    project.short_description,
+    project.long_description,
+    project.language,
+    project.topic,
+    project.difficulty,
+    project.url,
+  ]);
   return result.rows;
 }
 
