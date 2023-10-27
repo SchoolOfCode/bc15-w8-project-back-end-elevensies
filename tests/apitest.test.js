@@ -80,7 +80,7 @@ test("create new project", async () => {
 		console.error("Failed to reset tables");
 	}
 	// ARRANGE:
-	// Prepare the request body for creating a new todo
+	// Prepare the request body for creating a new project
 	const projectData = {
 		name: "User Login Field Invalidation",
 		short_description: "Destroy a login screen for your website.",
