@@ -44,4 +44,50 @@ export const seedData = [
     difficulty: "Difficult",
     url: "https://codepen.io/ktaylor902/pen/VwWwPWV",
   },
+  {
+    name: "Build a portfolio or a simple website",
+    short_description: "Create a portfolio which will showcase all of your personal achievements and links to your work.",
+    long_description:
+      "Create a portfolio which will showcase all of your personal achievements and links to your work. This can include using multiple pages and linking them together, incorporating anchor tags to head somewhere external.",
+    language: "HTML",
+    difficulty: "Easy",
+    url: "https://codepen.io/diegoleme/pen/qBpyvr",
+  },
+  {
+    name: "Create an email newsletter",
+    short_description: "Launch an email newsletter of upcoming events in the area or your favorite local spots",
+    long_description:
+      "Build an email newsletter to share your journey into tech with lessons you’ve learned and projects you’ve built with friends and family",
+    language: "HTML",
+    difficulty: "Medium",
+    url: "https://codepen.io/diegoleme/pen/qBpyvr",
+  },
+  {
+    name: "Build a form",
+    short_description: "Use interactivity tools to build a form.",
+    long_description:
+      "Knowing how to put interactive controls together to build a form is extremely useful in web development. You use buttons, inputs, forms, and HTML elements to allow for user input.",
+    language: "HTML",
+    difficulty: "Medium",
+    url: "https://codepen.io/diegoleme/pen/qBpyvr",
+  },
+  {
+    name: "Copy the Google Search Homepage",
+    short_description: "Replicating the Google homepage is a CSS source code project you can complete.",
+    long_description:
+      "By replicating the existing search page, you will be testing your ability to manipulate colors, search bars, fonts, and buttons using CSS and HTML.",
+    language: "CSS",
+    difficulty: "Medium",
+    url: "https://codepen.io/diegoleme/pen/qBpyvr",
+  },
+  {
+    name: "Name Cells with CSS",
+    short_description: "Using CSS to name cells on a website is another easy and efficient way to master your skills. ",
+    long_description:
+      "You can start by defining the named template areas and separating the areas you want to name from the ones you do not want to name.",
+    language: "CSS",
+    difficulty: "Easy",
+    url: "https://codepen.io/diegoleme/pen/qBpyvr",
+  },
+  
 ];
