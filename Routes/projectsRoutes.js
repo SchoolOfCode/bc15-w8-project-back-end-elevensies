@@ -13,6 +13,8 @@ projectsRoutes.get(
 
 projectsRoutes.get("/language/:lang", projectsController.getProjectsByLanguage);
 
+projectsRoutes.get("/:id", projectsController.getProjectById);
+
 projectsRoutes.post("/", projectsController.createProject);
 
 projectsRoutes.delete("/:id", projectsController.deleteProjectById);

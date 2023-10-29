@@ -9,6 +9,15 @@ export const seedData = [
     url: "https://codepen.io/diegoleme/pen/qBpyvr",
   },
   {
+    name: "Create an email newsletter",
+    short_description: "Launch an email newsletter",
+    long_description:
+      "Build an email newsletter to share your journey into tech with lessons you’ve learned and projects you’ve built with friends and family",
+    language: "HTML",
+    difficulty: "Medium",
+    url: "https://codepen.io/diegoleme/pen/qBpyvr",
+  },
+  {
     name: "Registration Form",
     short_description: "Create a registration form for your website",
     long_description:
@@ -16,6 +25,15 @@ export const seedData = [
     language: "CSS",
     difficulty: "Easy",
     url: "https://codepen.io/linasera05/pen/VwqvamN",
+  },
+  {
+    name: "Copy the Google homepage",
+    short_description: "Replicating the Google homepage.",
+    long_description:
+      "By replicating the existing search page, you will be testing your ability to manipulate colors, search bars, fonts, and buttons using CSS and HTML.",
+    language: "CSS",
+    difficulty: "Medium",
+    url: "https://codepen.io/diegoleme/pen/qBpyvr",
   },
   {
     name: "JS Typewriter",
@@ -36,6 +54,15 @@ export const seedData = [
     url: "https://marina-ferreira.github.io/projects/js/memory-game/",
   },
   {
+    name: "Name Cells with CSS",
+    short_description: "Use CSS to name cells on a website ",
+    long_description:
+      "You can start by defining the named template areas and separating the areas you want to name from the ones you do not want to name.",
+    language: "CSS",
+    difficulty: "Easy",
+    url: "https://codepen.io/diegoleme/pen/qBpyvr",
+  },
+  {
     name: "Flashcard Maker",
     short_description: "Create flashcard maker to help you revise",
     long_description:
@@ -45,21 +72,13 @@ export const seedData = [
     url: "https://codepen.io/ktaylor902/pen/VwWwPWV",
   },
   {
-    name: "Build a portfolio or a simple website",
-    short_description: "Create a portfolio which will showcase all of your personal achievements and links to your work.",
+    name: "Build a portfolio",
+    short_description:
+      "Create a portfolio which will showcase your achievements.",
     long_description:
       "Create a portfolio which will showcase all of your personal achievements and links to your work. This can include using multiple pages and linking them together, incorporating anchor tags to head somewhere external.",
     language: "HTML",
     difficulty: "Easy",
-    url: "https://codepen.io/diegoleme/pen/qBpyvr",
-  },
-  {
-    name: "Create an email newsletter",
-    short_description: "Launch an email newsletter of upcoming events in the area or your favorite local spots",
-    long_description:
-      "Build an email newsletter to share your journey into tech with lessons you’ve learned and projects you’ve built with friends and family",
-    language: "HTML",
-    difficulty: "Medium",
     url: "https://codepen.io/diegoleme/pen/qBpyvr",
   },
   {
@@ -71,23 +90,4 @@ export const seedData = [
     difficulty: "Medium",
     url: "https://codepen.io/diegoleme/pen/qBpyvr",
   },
-  {
-    name: "Copy the Google Search Homepage",
-    short_description: "Replicating the Google homepage is a CSS source code project you can complete.",
-    long_description:
-      "By replicating the existing search page, you will be testing your ability to manipulate colors, search bars, fonts, and buttons using CSS and HTML.",
-    language: "CSS",
-    difficulty: "Medium",
-    url: "https://codepen.io/diegoleme/pen/qBpyvr",
-  },
-  {
-    name: "Name Cells with CSS",
-    short_description: "Using CSS to name cells on a website is another easy and efficient way to master your skills. ",
-    long_description:
-      "You can start by defining the named template areas and separating the areas you want to name from the ones you do not want to name.",
-    language: "CSS",
-    difficulty: "Easy",
-    url: "https://codepen.io/diegoleme/pen/qBpyvr",
-  },
-  
 ];

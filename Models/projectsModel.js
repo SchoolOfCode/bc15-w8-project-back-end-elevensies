@@ -25,6 +25,15 @@ export async function getProjectsByLanguage(language) {
   return result.rows;
 }
 
+//get by ID
+export async function getProjectById(id) {
+  // build SQL query
+  const queryText = "SELECT * FROM projects WHERE id = $1";
+  // send query and store result
+  const result = await pool.query(queryText, [`${id}`]);
+  return result.rows;
+}
+
 //add new project
 export async function createProject(project) {
   const queryText = `INSERT INTO projects (

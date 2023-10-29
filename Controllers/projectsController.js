@@ -30,6 +30,18 @@ export async function getProjectsByLanguage(req, res) {
   res.status(200).json({ status: "success", data: projects });
 }
 
+//Third request would be to filter projects and get by language
+export async function getProjectById(req, res) {
+  const id = req.params.id;
+  const projects = await projectsModel.getProjectById(id);
+  if (!projects) {
+    return res
+      .status(404)
+      .json({ status: "fail", data: { message: "Projects Not Found" } });
+  }
+  res.status(200).json({ status: "success", data: projects });
+}
+
 //Fourth request would create a new project and add it to the DB
 export async function createProject(req, res) {
   const data = req.body;
