@@ -3,6 +3,9 @@
 
 name: Node.js CI
 
+env:
+  NAME: 'Test Environment'
+
 on:
   push:
     branches: [ "main" ]
