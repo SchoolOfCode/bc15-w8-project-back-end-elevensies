@@ -103,7 +103,7 @@ test("create new project", async () => {
 	expect(response.body.data.length).toBe(1);
 
 	const responseData = response.body.data[0];
-	expect(responseData.id).toBe(6);
+	expect(responseData.id).toBe(11);
 	expect(responseData.name).toBe("User Login Field Invalidation");
 	expect(responseData.short_description).toBe(
 		"Destroy a login screen for your website."
@@ -157,7 +157,7 @@ test("delete a project", async function () {
 	expect(Array.isArray(response.body.data)).toBe(true);
 
 	const responseData = response.body.data[0];
-	expect(responseData.id).toBe(6);
+	expect(responseData.id).toBe(11);
 	expect(responseData.name).toBe("User Login Field Invalidation");
 
 	// Send a DELETE request to the endpoint for the created project
